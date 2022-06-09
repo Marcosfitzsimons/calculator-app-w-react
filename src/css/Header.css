@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+.header {
+  width: 100%;
+  position: absolute;
+  z-index: 22;
+  top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.theme-switcher-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 10rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 1.5rem;
+  background-color: var(--bgContent);
+}
+
+.me {
+  position: absolute;
+  top: -7.5rem;
+  opacity: 0.5;
+  animation-name: me;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  font-family: "Roboto Mono", monospace;
+  color: var(--textColor);
+}
+
+.ri-github-fill {
+  font-size: 2.3rem;
+  position: relative;
+  top: 0.6rem;
+  color: var(--limeGreen);
+}
+
+@keyframes me {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

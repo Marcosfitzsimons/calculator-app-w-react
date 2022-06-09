@@ -1,38 +1,107 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap");
+
+:root {
+  --limeGreen: hsl(163, 72%, 41%);
+  --brightRed: hsl(356, 69%, 56%);
+
+  --bgMain: #fffefe;
+  --bgBody: rgb(238, 234, 234);
+  --textColor: #272a32;
+  --bgBtn: #f7f3f3;
+  --bgContent: rgb(250, 249, 249);
+
+  --btnHover: #faf3f3;
+
+  --white: #fff;
+  --black: #000;
+}
+
+.dark-mode {
+  --bgMain: #272a32;
+  --bgContent: #2d313b;
+  --textColor: #fafafa;
+  --bgBody: #121212;
+  --btnHover: #292d36;
+  --bgBtn: #232730;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bgBody);
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+/* ==============
+  Global Styles
+============== */
+
+.container {
+  width: min(90%, 120rem);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  max-width: 75ch;
+}
+
+/* ==============
+  Utilities
+============== */
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-border {
+  border: 0;
+}
+
+.center-text {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.margin-bottom {
+  margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* ==============
+  Custom Styles
+============== */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  height: 100vh;
+  padding-top: 1rem;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
