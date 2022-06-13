@@ -9,26 +9,16 @@
   justify-content: center;
 }
 
-.theme-switcher-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
-  width: 10rem;
-  padding: 0.8rem 1.8rem;
-  border-radius: 1.5rem;
-  background-color: var(--bgContent);
-}
-
 .me {
   position: absolute;
-  top: -7.5rem;
+  top: -7rem;
   opacity: 0.5;
   animation-name: me;
   animation-duration: 4s;
   animation-iteration-count: infinite;
   font-family: "Roboto Mono", monospace;
   color: var(--textColor);
+  user-select: none;
 }
 
 .ri-github-fill {

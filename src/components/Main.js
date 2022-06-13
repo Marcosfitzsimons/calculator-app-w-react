@@ -21,6 +21,13 @@ function Main(props) {
     }
   };
 
+  const errorMsg = () => {
+    if (input.slice(-1) === "/" || input.slice(-1) === "*" || input.slice(-1) === "." || input.slice(-1) === "-" || input.slice(-1) === "+") {
+      alert("Operacion no valida");
+      return false;
+    }
+  }
+
   return (
     <main className="main container">
       <Header />
@@ -56,7 +63,7 @@ function Main(props) {
           <Btn handleClick={addInput}>+</Btn>
         </div>
         <div className="fila">
-          <Btn className="equals-btn" handleClick={calculateResult}>
+          <Btn className="equals-btn" handleClick={calculateResult} onClick={errorMsg}>
             =
           </Btn>
         </div>

@@ -1,14 +1,11 @@
 import "../css/Header.css";
 import React from "react";
-import Icon from "./Icon";
+import DarkMode from "./DarkMode";
 
 export function Header(props) {
   return (
     <header className="header">
-      <div className="theme-switcher-container">
-        <Icon isSunIcon={true} />
-        <Icon isSunIcon={false} />
-      </div>
+      <DarkMode />
       <span className="me">
         By Marcos Fitzsimons{" "}
         <a

@@ -1,30 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap");
 
-:root {
-  --limeGreen: hsl(163, 72%, 41%);
-  --brightRed: hsl(356, 69%, 56%);
-
-  --bgMain: #fffefe;
-  --bgBody: rgb(214, 213, 213);
-  --textColor: #272a32;
-  --bgBtn: #f7f3f3;
-  --bgContent: rgb(250, 249, 249);
-
-  --btnHover: #faf3f3;
-
-  --white: #fff;
-  --black: #000;
-}
-
-.dark-mode {
-  --bgMain: #272a32;
-  --bgContent: #2d313b;
-  --textColor: #fafafa;
-  --bgBody: #121212;
-  --btnHover: #292d36;
-  --bgBtn: #232730;
-}
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;

@@ -1,0 +1,88 @@
+:root {
+  --limeGreen: hsl(163, 72%, 41%);
+  --brightRed: hsl(356, 69%, 56%);
+
+  --bgMain: #fffefe;
+  --bgBody: rgb(224, 222, 222);
+  --textColor: #272a32;
+  --bgBtn: #f8f5f5;
+  --bgContent: rgb(248, 247, 247);
+
+  --btnHover: #faf3f3;
+  --iconColor: rgb(148, 144, 144);
+
+  --white: #fff;
+  --black: #000;
+}
+
+[data-theme="dark"] {
+  --bgMain: #21242b;
+  --bgContent: #262a31;
+  --textColor: #fafafa;
+  --bgBody: #121212;
+  --btnHover: #292d36;
+  --bgBtn: #232730;
+}
+
+.theme-switcher-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 10rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 1.5rem;
+  background-color: var(--bgContent);
+}
+
+body {
+  background-color: var(--bgBody);
+  color: var(--textColor);
+  transition: 1s;
+}
+
+.main {
+  background-color: var(--bgMain);
+}
+
+.btn-container {
+  background-color: var(--bgBtn);
+  color: var(--textColor);
+}
+
+.btn-container:hover {
+  background-color: var(--btnHover);
+}
+
+.btn-container--mod {
+  color: var(--brightRed);
+}
+
+.operator {
+  color: var(--brightRed);
+}
+
+.calculator-container {
+  background-color: var(--bgContent);
+}
+
+.equals-btn {
+  background-color: var(--limeGreen);
+}
+
+.equals-btn:hover {
+  background-color: hsl(163, 76%, 35%);
+}
+
+.ri-sun-line,
+.ri-moon-line {
+  cursor: pointer;
+  font-size: 1.9rem;
+  color: var(--iconColor);
+  z-index: 4444;
+}
+
+.ri-sun-line.active,
+.ri-moon-line.active {
+  color: var(--textColor);
+}
