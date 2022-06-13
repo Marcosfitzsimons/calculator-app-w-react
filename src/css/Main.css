@@ -4,10 +4,11 @@
   align-items: center;
   flex-direction: column;
   background-color: var(--bgMain);
-  width: 40rem;
-  height: 85rem;
+  width: 37.5rem;
+  height: 88rem;
   position: relative;
   border-radius: 3rem;
+  box-shadow: 0px 11px 6px -3px rgba(0, 0, 0, 0.1);
 }
 
 .calculator-container {

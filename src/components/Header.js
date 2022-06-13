@@ -1,4 +1,5 @@
 import "../css/Header.css";
+import React from "react";
 import Icon from "./Icon";
 
 export function Header(props) {
@@ -13,7 +14,7 @@ export function Header(props) {
         <a
           href="https://github.com/Marcosfitzsimons"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           <i className="ri-github-fill"></i>
         </a>

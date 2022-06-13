@@ -1,43 +1,69 @@
 import "../css/Main.css";
+import React from "react";
 import Btn from "./Btn";
 import Header from "../components/Header";
 import Result from "../components/Result";
+import { useState } from "react";
+import { evaluate } from "mathjs";
 
 function Main(props) {
+  const [input, setInput] = useState("");
+
+  const addInput = (value) => {
+    setInput(input + value);
+  };
+
+  const calculateResult = () => {
+    if (input) {
+      setInput(evaluate(input));
+    } else {
+      alert("Por favor ingrese valores para realizar los calculos.")
+    }
+  };
+
   return (
     <main className="main container">
       <Header />
-      <Result input="4444444" />
+      <Result input={input} />
       <section className="calculator-container container">
         <div className="fila">
-          <Btn>7</Btn>
-          <Btn>8</Btn>
-          <Btn>9</Btn>
-          <Btn>%</Btn>
+          <Btn handleClick={addInput}>7</Btn>
+          <Btn handleClick={addInput}>8</Btn>
+          <Btn handleClick={addInput}>9</Btn>
+          <Btn handleClick={addInput}>/</Btn>
         </div>
         <div className="fila">
-          <Btn>4</Btn>
-          <Btn>5</Btn>
-          <Btn>6</Btn>
-          <Btn>x</Btn>
+          <Btn handleClick={addInput}>4</Btn>
+          <Btn handleClick={addInput}>5</Btn>
+          <Btn handleClick={addInput}>6</Btn>
+          <Btn handleClick={addInput}>*</Btn>
         </div>
         <div className="fila">
-          <Btn>1</Btn>
-          <Btn>2</Btn>
-          <Btn>3</Btn>
-          <Btn>-</Btn>
+          <Btn handleClick={addInput}>1</Btn>
+          <Btn handleClick={addInput}>2</Btn>
+          <Btn handleClick={addInput}>3</Btn>
+          <Btn handleClick={addInput}>-</Btn>
         </div>
         <div className="fila">
-          <Btn>AC</Btn>
-          <Btn>0</Btn>
-          <Btn>.</Btn>
-          <Btn>+</Btn>
+          <button
+            className="btn-container btn-container--mod"
+            onClick={() => setInput("")}
+          >
+            AC
+          </button>
+          <Btn handleClick={addInput}>0</Btn>
+          <Btn handleClick={addInput}>.</Btn>
+          <Btn handleClick={addInput}>+</Btn>
         </div>
         <div className="fila">
-          <button className="equals-btn">=</button>
+          <Btn className="equals-btn" handleClick={calculateResult}>
+            =
+          </Btn>
         </div>
         <div className="fila">
-          <button className="clear-btn">Clear</button>
+          <button className="clear-btn" onClick={() => setInput("")}>
+            Clear
+          </button>
         </div>
       </section>
     </main>

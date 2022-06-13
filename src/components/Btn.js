@@ -1,16 +1,21 @@
 import "../css/Btn.css";
+import React from "react";
 
 function Btn(props) {
   const isOperator = (value) => {
     return isNaN(value) && value !== "." && value !== "=";
   };
 
+  const isEquals = (value) => {
+    return value === "=";
+  };
+
   return (
     <div
-      className={`btn-container ${
-        isOperator(props.children) ? "operator" : ""
-      }`.trim()}
+      className={`btn-container ${isEquals(props.children) ? "equals-btn" : ""
+        } ${isOperator(props.children) ? "operator" : ""}`.trim()}
       // .trim permite eliminar los espacios del principio o final de una cadena de caracteres.
+      onClick={() => props.handleClick(props.children)}
     >
       {props.children}
     </div>
