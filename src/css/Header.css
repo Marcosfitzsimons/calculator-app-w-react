@@ -21,6 +21,12 @@
   user-select: none;
 }
 
+@media screen and (min-width: 700px) {
+  .me {
+    top: -8.5rem;
+  }
+}
+
 .ri-github-fill {
   font-size: 2.3rem;
   position: relative;

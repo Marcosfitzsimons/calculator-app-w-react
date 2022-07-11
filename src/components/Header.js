@@ -6,7 +6,7 @@ export function Header(props) {
   return (
     <header className="header">
       <DarkMode />
-      <span className="me">
+      <p className="me">
         By Marcos Fitzsimons{" "}
         <a
           href="https://github.com/Marcosfitzsimons"
@@ -15,7 +15,7 @@ export function Header(props) {
         >
           <i className="ri-github-fill"></i>
         </a>
-      </span>
+      </p>
     </header>
   );
 }
